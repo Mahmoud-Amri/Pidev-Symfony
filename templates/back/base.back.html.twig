@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Backend - Administration{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/back.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+{#            <li><a href="{{ path('admin_dashboard') }}">Dashboard</a></li>#}
+            <li><a href="{{ path('app_post_index') }}">Posts</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    {% block body %}{% endblock %}
+</main>
+<footer>
+    <p>&copy; 2024 Backend</p>
+</footer>
+{% block javascripts %}{% endblock %}
+</body>
+</html>

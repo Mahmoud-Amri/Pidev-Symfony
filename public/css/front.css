@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007BFF;
+}
