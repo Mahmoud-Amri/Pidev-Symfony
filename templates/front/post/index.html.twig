@@ -1,0 +1,28 @@
+{% extends 'front/base.front.html.twig' %}
+
+{% block title %}Liste des Posts{% endblock %}
+
+{% block body %}
+    <h1>Gestion des Posts</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titre</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td>
+                    <a href="{{ path('app_post_edit', { id: post.id }) }}">Modifier</a> |
+                    <a href="{{ path('app_post_delete', { id: post.id }) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
